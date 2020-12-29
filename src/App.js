@@ -38,11 +38,11 @@ function App() {
 				<div className="IncandExp">
 					<div className="inc">
 						<h1 className="inc--header">INCOME</h1>
-						<span className="inc--balance">{income}</span>
+						<span className="inc--balance">${income}</span>
 					</div>
 					<div className="exp">
 						<h1 className="exp--header">EXPENSE</h1>
-						<span className="exp--balance">{expense}</span>
+						<span className="exp--balance">${expense}</span>
 					</div>
 				</div>
 				<div className="history">
