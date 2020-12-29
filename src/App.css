@@ -8,7 +8,6 @@
 }
 
 .container {
-	/* background-color: blanchedalmond; */
 	padding: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +46,6 @@
 
 .history--header,
 .transactions {
-	margin: 30px 0;
 	padding-bottom: 5px;
 	border-bottom: 1px solid rgb(206, 193, 193);
 }
@@ -82,4 +80,33 @@ input {
 
 .btn--in:active {
 	transform: scale(0.96);
+}
+.lists {
+	padding: 0;
+}
+.lists--in {
+	list-style-type: none;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+	margin: 10px 0;
+	/* padding: 10px; */
+	color: #333;
+	font-size: 18px;
+	font-weight: 1000;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.income {
+	border: 2px solid green;
+}
+.expense {
+	border: 2px solid red;
+}
+
+.lists--in__header,
+.lists--in__amount {
+	margin: 0;
+	padding: 8px;
 }

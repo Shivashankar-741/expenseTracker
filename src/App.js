@@ -7,21 +7,22 @@ function App() {
 	const [income, setIncome] = useState("0.00");
 	const [expense, setExpense] = useState("0.00");
 	const [balance, setBalance] = useState("0.00");
-
+	const [data, setData] = useState([]);
+	// { text: "empty", amount: 1000 }
 	const clickHandler = () => {
 		if (text !== "" && amount !== "") {
 			if (parseInt(amount) >= 0) {
-				console.log(amount, text);
 				setIncome(parseInt(income) + parseInt(amount));
 				setBalance(parseInt(balance) + parseInt(amount));
+				setData(data.concat({ text, amount }));
 			} else if (parseInt(amount) < 0) {
-				console.log(amount, text);
 				setExpense(parseInt(amount) + parseInt(expense));
 				setBalance(parseInt(balance) + parseInt(amount));
+				setData(data.concat({ text, amount }));
 			}
+			setText("");
+			setAmount("");
 		}
-		setText("");
-		setAmount("");
 	};
 
 	return (
@@ -46,6 +47,22 @@ function App() {
 				</div>
 				<div className="history">
 					<h1 className="history--header">History</h1>
+
+					<ul className="lists">
+						{data.map((el, index) =>
+							el.amount > 0 ? (
+								<li className="lists--in income" key={index}>
+									<h3 className="lists--in__header">{el.text}</h3>
+									<h3 className="lists--in__amount">+${el.amount}</h3>
+								</li>
+							) : (
+								<li className="lists--in expense" key={index}>
+									<h3 className="lists--in__header">{el.text}</h3>
+									<h3 className="lists--in__amount">-${el.amount}</h3>
+								</li>
+							)
+						)}
+					</ul>
 				</div>
 				<div className="inputFields">
 					<h1 className="transactions">Add new transaction</h1>
