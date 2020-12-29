@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	/* background-color: blanchedalmond; */
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.App--balance__header,
+.inc--header,
+.exp--header {
+	margin: 0;
+}
+
+.App--header__in,
+.App--balance {
+	margin: 10px 0;
+}
+
+.App--balance__in,
+.inc--balance,
+.exp--balance {
+	font-size: 30px;
+	font-weight: 800;
+}
+.inc--balance {
+	color: green;
+}
+.exp--balance {
+	color: red;
+}
+
+.IncandExp {
+	display: flex;
+	justify-content: space-evenly;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+	padding: 20px 10px;
+	margin: 20px 0;
+}
+
+.history--header,
+.transactions {
+	margin: 30px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgb(206, 193, 193);
+}
+
+.text,
+.amount {
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+input {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+.btn--in {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: violet;
+	border-radius: 10px;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	outline: none;
+}
+
+.btn--in:active {
+	transform: scale(0.96);
+}
